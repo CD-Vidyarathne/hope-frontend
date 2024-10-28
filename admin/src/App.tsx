@@ -1,5 +1,12 @@
+import { LoginPage, ForgotPasswordPage, ResetPasswordPage } from "./pages/";
+import "./index.css";
+
 function App() {
-  return <h1 className="font-bold underline text-teal-600">Hello, Admin!</h1>;
+  return (
+    <main className="app">
+      <ForgotPasswordPage />
+    </main>
+  );
 }
 
 export default App;
