@@ -11,7 +11,7 @@ function HopeButton({ text, className, onClick }: HopeButtonProps) {
   return (
     <button
       className={cn(
-        " bg-main text-white font-bold py-3 rounded-lg hover:bg-gray-200 transition-colors",
+        "px-2 bg-main text-white font-bold py-3 rounded-lg hover:bg-gray-200 transition-colors",
         className,
       )}
       onClick={onClick}

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { loginImg } from "../assets/index";
 import AuthImage from "../components/AuthImage";
 import AuthInputs from "../components/AuthInputs";
@@ -23,6 +24,12 @@ function LoginPage() {
           placeholder="Password"
           className="w-full p-3 rounded-lg border border-border focus:outline-none focus:ring-1 focus:ring-main mb-2"
         />
+        <Link
+          to="/forgot-password"
+          className="text-sm text-main hover:text-main hover:underline"
+        >
+          Forgot Password?
+        </Link>
       </AuthInputs>
     </section>
   );

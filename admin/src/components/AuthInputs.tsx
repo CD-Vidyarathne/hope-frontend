@@ -19,7 +19,7 @@ function AuthInputs({
     >
       <img src={logo} alt="logo" className="max-w-[30%] mb-4" />
       <div className="text-center bg-white bg-opacity-10 w-[90%] md:w-[80%] lg:w-[80%] h-[60%] md:h-[50%] lg:h-[40%] border border-border rounded-[25px] flex flex-col justify-center items-center">
-        <div className="w-[80%] md:w-[60%] lg:w-[50%] flex flex-col gap-4">
+        <div className="w-[80%] md:w-[70%] lg:w-[70%] flex flex-col gap-4">
           <h3 className="text-white text-xl md:text-2xl font-semibold mb-4">
             {topic}
           </h3>
