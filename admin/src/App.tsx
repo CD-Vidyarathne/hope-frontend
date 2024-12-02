@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import {
   DashboardPage,
+  RequestPage,
   LoginPage,
-  OtherPage,
   ForgotPasswordPage,
   ResetPasswordPage,
 } from "./pages/";
@@ -25,7 +25,7 @@ function App() {
             }
           >
             <Route index element={<DashboardPage />} />
-            <Route path="other" element={<OtherPage />} />
+            <Route path="/requests" element={<RequestPage />} />
           </Route>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />

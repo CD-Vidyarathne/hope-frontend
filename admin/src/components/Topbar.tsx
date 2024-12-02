@@ -10,6 +10,9 @@ interface TopbarProps {
 function Topbar({ toggleMenu }: TopbarProps) {
   const [notifications, setNotifications] = useState<string[]>();
   const [unreadNotfications, setUnreadNotifications] = useState<string[]>();
+  useEffect(() => {
+    setNotifications(["1"]);
+  }, []);
 
   useEffect(() => {
     setUnreadNotifications(notifications?.filter((n) => n));
@@ -23,12 +26,13 @@ function Topbar({ toggleMenu }: TopbarProps) {
       >
         <FiSidebar />
       </button>
-      <div className="flex items-center justify-center gap-8">
-        {unreadNotfications?.length > 0 ? (
+      <div className="flex items-center fixed justify-center gap-8 right-10">
+        {unreadNotfications && unreadNotfications.length > 0 ? (
           <MdNotificationAdd />
         ) : (
           <MdNotifications />
         )}
+        {/* <MdNotifications /> */}
         <CgProfile />
       </div>
     </div>

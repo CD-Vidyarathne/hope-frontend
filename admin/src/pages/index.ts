@@ -2,12 +2,12 @@ import LoginPage from "./LoginPage";
 import ResetPasswordPage from "./ResetPasswordPage";
 import ForgotPasswordPage from "./ForgotPasswordPage";
 import DashboardPage from "./DashboardPage";
-import OtherPage from "./OtherPage";
+import RequestPage from "./RequestPage";
 
 export {
   LoginPage,
   ResetPasswordPage,
   ForgotPasswordPage,
   DashboardPage,
-  OtherPage,
+  RequestPage,
 };

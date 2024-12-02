@@ -13,8 +13,8 @@ import {
 import { logo } from "../assets";
 
 const links = [
-  { name: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt /> },
-  { name: "Request", path: "/request", icon: <FaFileAlt /> },
+  { name: "Dashboard", path: "/", icon: <FaTachometerAlt /> },
+  { name: "Requests", path: "/requests", icon: <FaFileAlt /> },
   { name: "Events", path: "/events", icon: <FaCalendarAlt /> },
   { name: "Profile Manage", path: "/profile", icon: <FaUserAlt /> },
   { name: "Transaction", path: "/transaction", icon: <FaDollarSign /> },
@@ -51,6 +51,7 @@ function Sidebar() {
           <hr className="border-t border-gray-400 mt-2" />
         </div>
         <div className="flex flex-col space-y-4 w-full items-center gap-6 text-lg ">
+          <div className="h-50px w-full md:hidden"></div>
           {links.map((link) => (
             <Link
               key={link.name}
