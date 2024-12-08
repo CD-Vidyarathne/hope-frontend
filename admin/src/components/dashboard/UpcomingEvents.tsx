@@ -49,7 +49,7 @@ const events: Event[] = [
   },
 ];
 
-function UpcomingEvents() {
+const UpcomingEvents = () => {
   type vtype = Date | null;
   const [selectedDate, setSelectedDate] = useState<vtype>(null);
 
@@ -102,7 +102,7 @@ function UpcomingEvents() {
       </div>
     </div>
   );
-}
+};
 
 interface EventCardProps {
   event: Event;

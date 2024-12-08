@@ -2,56 +2,56 @@ import ProgressCircle from "../charts/ProgressCircle";
 import GrowthChart from "../charts/GrowthChart";
 import MiniStat from "../charts/MiniStats";
 
-function Graphs() {
+const Graphs: React.FC = () => {
   return (
     <>
       <div
-        className="w-full p-6 bg-bgblue grid gap-6 rounded-lg 
-                      grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        className="w-full p-5 bg-bgblue grid gap-6 rounded-lg 
+                      grid-cols0 sm:grid-cols-2 lg:grid-cols-3"
       >
-        <GrowthChart title="Patient Profile Growth - 2024" />
-        <div className="space-y-4">
+        <GrowthChart title="Patient Profile Growth - 2025" />
+        <div className="space-y-3">
           <MiniStat
             label="Visitors this month"
-            value="1,235"
-            trend="2%"
+            value="2,235"
+            trend="3%"
             isPositive={true}
           />
           <MiniStat
             label="Visitors this month"
-            value="456"
-            trend="3%"
+            value="457"
+            trend="4%"
             isPositive={false}
           />
         </div>
-        <GrowthChart title="Donor Profile Growth - 2024" />
+        <GrowthChart title="Donor Profile Growth - 2025" />
       </div>
 
       <div
-        className="w-full p-6 bg-bgblue grid gap-6 rounded-lg 
-                      grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6"
+        className="w-full p-5 bg-bgblue grid gap-6 rounded-lg 
+                      grid-cols0 sm:grid-cols-2 lg:grid-cols-3 mt-6"
       >
         <ProgressCircle
-          percentage={72}
+          percentage={73}
           label="Donation Goal"
-          total="Rs 502K"
-          remaining="Rs 14K"
+          total="Rs 503K"
+          remaining="Rs 15K"
         />
         <ProgressCircle
-          percentage={80}
+          percentage={81}
           label="Yearly Income"
-          total="Rs 54,000.00"
+          total="Rs 55,000.00"
           remaining="-"
         />
         <ProgressCircle
-          percentage={60}
+          percentage={61}
           label="Volunteers"
-          total="1,375"
+          total="2,375"
           remaining="-"
         />
       </div>
     </>
   );
-}
+};
 
 export default Graphs;

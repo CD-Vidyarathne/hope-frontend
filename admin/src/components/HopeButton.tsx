@@ -7,7 +7,11 @@ interface HopeButtonProps
   onClick?: () => void;
 }
 
-function HopeButton({ text, className, onClick }: HopeButtonProps) {
+const HopeButton: React.FC<HopeButtonProps> = ({
+  text,
+  className,
+  onClick,
+}) => {
   return (
     <button
       className={cn(
@@ -19,6 +23,6 @@ function HopeButton({ text, className, onClick }: HopeButtonProps) {
       {text}
     </button>
   );
-}
+};
 
 export default HopeButton;

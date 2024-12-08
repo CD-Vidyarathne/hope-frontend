@@ -16,12 +16,12 @@ const links = [
   { name: "Dashboard", path: "/", icon: <FaTachometerAlt /> },
   { name: "Requests", path: "/requests", icon: <FaFileAlt /> },
   { name: "Events", path: "/events", icon: <FaCalendarAlt /> },
-  { name: "Profile Manage", path: "/profile", icon: <FaUserAlt /> },
+  { name: "Profile Manage", path: "/manage-profiles", icon: <FaUserAlt /> },
   { name: "Transaction", path: "/transaction", icon: <FaDollarSign /> },
   { name: "Analysis", path: "/analysis", icon: <FaChartLine /> },
 ];
 
-function Sidebar() {
+const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -70,6 +70,6 @@ function Sidebar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Sidebar;

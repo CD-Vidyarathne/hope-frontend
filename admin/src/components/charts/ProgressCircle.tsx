@@ -1,3 +1,5 @@
+import React from "react";
+
 interface ProgressCircleProps {
   percentage: number;
   label: string;
@@ -5,12 +7,12 @@ interface ProgressCircleProps {
   remaining: string;
 }
 
-function ProgressCircle({
+const ProgressCircle: React.FC<ProgressCircleProps> = ({
   percentage,
   label,
   total,
   remaining,
-}: ProgressCircleProps) {
+}) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-[100%]">
       <div className="relative w-24 h-24">
@@ -48,6 +50,6 @@ function ProgressCircle({
       </div>
     </div>
   );
-}
+};
 
 export default ProgressCircle;

@@ -1,3 +1,4 @@
+import React from "react";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 interface MiniStatProps {
@@ -7,7 +8,12 @@ interface MiniStatProps {
   isPositive: boolean;
 }
 
-function MiniStat({ label, value, trend, isPositive }: MiniStatProps) {
+const MiniStat: React.FC<MiniStatProps> = ({
+  label,
+  value,
+  trend,
+  isPositive,
+}) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4 w-[100%]">
       <div className="flex flex-col">
@@ -24,6 +30,6 @@ function MiniStat({ label, value, trend, isPositive }: MiniStatProps) {
       </div>
     </div>
   );
-}
+};
 
 export default MiniStat;

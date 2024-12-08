@@ -5,7 +5,7 @@ interface AuthImageProps {
   className?: string;
 }
 
-function AuthImage({ imageSrc, className }: AuthImageProps) {
+const AuthImage: React.FC<AuthImageProps> = ({ imageSrc, className }) => {
   return (
     <div
       className={cn(
@@ -36,6 +36,6 @@ function AuthImage({ imageSrc, className }: AuthImageProps) {
       </div>
     </div>
   );
-}
+};
 
 export default AuthImage;

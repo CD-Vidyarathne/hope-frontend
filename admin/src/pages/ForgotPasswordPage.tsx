@@ -1,9 +1,10 @@
+import React from "react";
 import { forgotpw } from "../assets/index";
 import AuthImage from "../components/AuthImage";
 import AuthInputs from "../components/AuthInputs";
 import HopeButton from "../components/HopeButton";
 
-function ForgotPasswordPage() {
+const ForgotPasswordPage: React.FC = () => {
   return (
     <section className="flex flex-col lg:flex-row h-screen">
       <AuthImage imageSrc={forgotpw} className="hidden lg:block lg:w-[60%]" />
@@ -23,12 +24,13 @@ function ForgotPasswordPage() {
         </div>
         <p className="text-white font-bold mb-1">OTP Code</p>
         <input
-          type="OTP Code"
+          type="text"
+          placeholder="Enter OTP Code"
           className="w-full p-3 rounded-lg border border-border focus:outline-none focus:ring-1 focus:ring-main mb-4"
         />
       </AuthInputs>
     </section>
   );
-}
+};
 
 export default ForgotPasswordPage;

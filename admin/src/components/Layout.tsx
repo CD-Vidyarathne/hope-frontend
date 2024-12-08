@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Topbar from "./Topbar";
 import { useState } from "react";
 
-function Layout() {
+const Layout: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
@@ -22,6 +22,6 @@ function Layout() {
       </div>
     </div>
   );
-}
+};
 
 export default Layout;

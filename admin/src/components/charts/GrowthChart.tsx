@@ -1,3 +1,4 @@
+import React from "react";
 import {
   BarChart,
   Bar,
@@ -26,7 +27,7 @@ const data: DataPoint[] = [
   { name: "Jul", growth: 85 },
 ];
 
-function GrowthChart({ title }: GrowthChartProps) {
+const GrowthChart: React.FC<GrowthChartProps> = ({ title }) => {
   return (
     <div className="bg-white h-[300px] px-8 pt-8 pb-16 md:pb-8 rounded-lg shadow-md w-[100%]">
       <h3 className="text-lg font-bold mb-4">{title}</h3>
@@ -40,6 +41,6 @@ function GrowthChart({ title }: GrowthChartProps) {
       </ResponsiveContainer>
     </div>
   );
-}
+};
 
 export default GrowthChart;

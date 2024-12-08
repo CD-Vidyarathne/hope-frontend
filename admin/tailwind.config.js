@@ -7,6 +7,7 @@ export default {
         main: "#293C5E",
         bgblue: "#D5DDEC",
         border: "#5882C1",
+        dark: "#001845",
       },
     },
   },

@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import {
@@ -6,12 +7,16 @@ import {
   LoginPage,
   ForgotPasswordPage,
   ResetPasswordPage,
+  EventsPage,
+  ProfileManagePage,
+  AnalysisPage,
 } from "./pages/";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
-function App() {
+const App: React.FC = () => {
   // NOTE: Demo purpose only.
-  const isAuthenticated = true;
+  const isAuthenticated: boolean = true;
+
   return (
     <Router>
       <div className="w-screen h-screen">
@@ -26,6 +31,9 @@ function App() {
           >
             <Route index element={<DashboardPage />} />
             <Route path="/requests" element={<RequestPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/manage-profiles" element={<ProfileManagePage />} />
+            <Route path="/analysis" element={<AnalysisPage />} />
           </Route>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
@@ -34,6 +42,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,22 +1,78 @@
+import MainSection from "../components/MainSection";
 import TitleBar from "../components/TitleBar";
+import {
+  childsupport,
+  eventrequest,
+  patientsupport,
+  eldersupport,
+} from "../assets";
 
-function RequestPage() {
+const RequestPage: React.FC = () => {
   return (
     <div className="py-8">
       <TitleBar title="Requests" />
-      <div className="p-8 ">
-        <div className="grid grid-cols-2 gap-4 p-4 bg-bgblue rounded-lg w-full h-full">
-          <div className="bg-blue-500 text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px]">
-            <div className="h-[66%]">This is for image</div>
-            <div className="h-[34%] bg-main">This is for text</div>
+      <MainSection>
+        <div className="grid grid-cols-2 gap-y-4 p-4 bg-bgblue justify-between items-center rounded-lg h-full w-[70%] ">
+          <div className="bg-dark text-white cursor-pointer rounded overflow-hidden flex flex-col w-[400px] h-[250px] group">
+            <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
+              <img
+                src={patientsupport}
+                alt="Patient Support"
+                className="w-full"
+              />
+            </div>
+            <div className="h-[34%] bg-dark">
+              <div className="flex justify-between font-[700] items-center p-4">
+                <p>Patient Support Requests</p>
+                <div className="ml-auto bg-bgblue text-main p-3 rounded-full">
+                  6
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="bg-green-500 text-white p-4 rounded">Item 2</div>
-          <div className="bg-red-500 text-white p-4 rounded">Item 3</div>
-          <div className="bg-yellow-500 text-white p-4 rounded">Item 4</div>
+          <div className=" bg-dark cursor-pointer text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px] group">
+            <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
+              <img src={childsupport} alt="Child Support" className="w-full" />
+            </div>
+            <div className="h-[34%] bg-dark">
+              <div className="flex justify-between font-[700] items-center p-4">
+                <p>Child Support Requests</p>
+                <div className="ml-auto bg-bgblue text-main p-3 rounded-full">
+                  6
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-dark cursor-pointer group text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px]">
+            <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
+              <img src={eldersupport} alt="Elder Support" className="w-full" />
+            </div>
+            <div className="h-[34%] bg-dark">
+              <div className="flex justify-between font-[700] items-center p-4">
+                <p>Elder Support Requests</p>
+                <div className="ml-auto bg-bgblue text-main p-3 rounded-full">
+                  6
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-dark cursor-pointer group text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px]">
+            <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
+              <img src={eventrequest} alt="Event Request" className="w-full" />
+            </div>
+            <div className="h-[34%] bg-dark">
+              <div className="flex justify-between font-[700] items-center p-4">
+                <p>Event Requests</p>
+                <div className="ml-auto bg-bgblue text-main p-3 rounded-full">
+                  6
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </MainSection>
     </div>
   );
-}
+};
 
 export default RequestPage;

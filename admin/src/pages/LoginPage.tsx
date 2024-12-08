@@ -1,9 +1,10 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { loginImg } from "../assets/index";
 import AuthImage from "../components/AuthImage";
 import AuthInputs from "../components/AuthInputs";
 
-function LoginPage() {
+const LoginPage: React.FC = () => {
   return (
     <section className="flex flex-col lg:flex-row h-screen">
       <AuthImage imageSrc={loginImg} className="hidden lg:block lg:w-[60%]" />
@@ -33,6 +34,6 @@ function LoginPage() {
       </AuthInputs>
     </section>
   );
-}
+};
 
 export default LoginPage;

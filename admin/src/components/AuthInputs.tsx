@@ -7,12 +7,12 @@ interface AuthInputsProps {
   className?: string;
 }
 
-function AuthInputs({
+const AuthInputs: React.FC<AuthInputsProps> = ({
   topic,
   buttonText,
   children,
   className,
-}: AuthInputsProps) {
+}) => {
   return (
     <div
       className={`w-full lg:w-[40%] bg-gradient-to-br from-border to-main flex flex-col justify-center items-center ${className}`}
@@ -33,6 +33,6 @@ function AuthInputs({
       </div>
     </div>
   );
-}
+};
 
 export default AuthInputs;

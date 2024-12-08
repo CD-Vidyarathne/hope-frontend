@@ -7,7 +7,7 @@ interface TopbarProps {
   toggleMenu: () => void;
 }
 
-function Topbar({ toggleMenu }: TopbarProps) {
+const Topbar: React.FC<TopbarProps> = ({ toggleMenu }) => {
   const [notifications, setNotifications] = useState<string[]>();
   const [unreadNotfications, setUnreadNotifications] = useState<string[]>();
   useEffect(() => {
@@ -37,6 +37,6 @@ function Topbar({ toggleMenu }: TopbarProps) {
       </div>
     </div>
   );
-}
+};
 
 export default Topbar;
