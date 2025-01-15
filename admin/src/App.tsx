@@ -10,6 +10,10 @@ import {
   EventsPage,
   ProfileManagePage,
   AnalysisPage,
+  RequestTablePage,
+  RequestProfilePage,
+  RequestAddPage,
+  EventTablePage,
 } from "./pages/";
 import ProtectedRoute from "./routes/ProtectedRoute";
 
@@ -30,8 +34,47 @@ const App: React.FC = () => {
             }
           >
             <Route index element={<DashboardPage />} />
-            <Route path="/requests" element={<RequestPage />} />
-            <Route path="/events" element={<EventsPage />} />
+            <Route path="/requests">
+              <Route index element={<RequestPage />} />
+              <Route path="patients">
+                <Route index element={<RequestTablePage title="Patients" />} />
+                <Route
+                  path=":id"
+                  element={<RequestProfilePage title="Patients" />}
+                />
+                <Route
+                  path=":id/add"
+                  element={<RequestAddPage title="Patients" />}
+                />
+              </Route>
+              <Route path="children">
+                <Route index element={<RequestTablePage title="Children" />} />
+                <Route
+                  path=":id"
+                  element={<RequestProfilePage title="Children" />}
+                />
+                <Route
+                  path=":id/add"
+                  element={<RequestAddPage title="Children" />}
+                />
+              </Route>
+              <Route path="elders">
+                <Route index element={<RequestTablePage title="Elders" />} />
+                <Route
+                  path=":id"
+                  element={<RequestProfilePage title="Elders" />}
+                />
+                <Route
+                  path=":id/add"
+                  element={<RequestAddPage title="Elders" />}
+                />
+              </Route>
+            </Route>
+            <Route path="events">
+              <Route index element={<EventsPage />} />
+              <Route path="admin" element={<EventTablePage title="Admin" />} />
+              <Route path="users" element={<EventTablePage title="Users" />} />
+            </Route>
             <Route path="/manage-profiles" element={<ProfileManagePage />} />
             <Route path="/analysis" element={<AnalysisPage />} />
           </Route>

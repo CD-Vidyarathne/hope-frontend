@@ -6,14 +6,19 @@ import {
   patientsupport,
   eldersupport,
 } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 const RequestPage: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="py-8">
       <TitleBar title="Requests" />
       <MainSection>
         <div className="grid grid-cols-2 gap-y-4 p-4 bg-bgblue justify-between items-center rounded-lg h-full w-[70%] ">
-          <div className="bg-dark text-white cursor-pointer rounded overflow-hidden flex flex-col w-[400px] h-[250px] group">
+          <div
+            onClick={() => navigate("patients")}
+            className="bg-dark text-white cursor-pointer rounded overflow-hidden flex flex-col w-[400px] h-[250px] group"
+          >
             <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
               <img
                 src={patientsupport}
@@ -30,7 +35,10 @@ const RequestPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className=" bg-dark cursor-pointer text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px] group">
+          <div
+            className=" bg-dark cursor-pointer text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px] group"
+            onClick={() => navigate("children")}
+          >
             <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
               <img src={childsupport} alt="Child Support" className="w-full" />
             </div>
@@ -43,7 +51,10 @@ const RequestPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-dark cursor-pointer group text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px]">
+          <div
+            onClick={() => navigate("elders")}
+            className="bg-dark cursor-pointer group text-white rounded overflow-hidden flex flex-col w-[400px] h-[250px]"
+          >
             <div className="h-[66%] flex items-center justify-center group-hover:animate-pulse overflow-hidden">
               <img src={eldersupport} alt="Elder Support" className="w-full" />
             </div>

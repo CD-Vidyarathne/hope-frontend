@@ -1,3 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+  box-sizing: border-box;
+}
+
+.hero-text {
+  font-family: "League Gothic", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.75rem;
+}

@@ -6,6 +6,10 @@ import RequestPage from "./RequestPage";
 import EventsPage from "./EventsPage";
 import ProfileManagePage from "./ProfileManagePage";
 import AnalysisPage from "./AnalysisPage";
+import RequestTablePage from "./RequestTablePage";
+import RequestProfilePage from "./RequestProfilePage";
+import RequestAddPage from "./RequestAddPage";
+import EventTablePage from "./EventTablePage";
 
 export {
   LoginPage,
@@ -16,4 +20,8 @@ export {
   EventsPage,
   ProfileManagePage,
   AnalysisPage,
+  RequestTablePage,
+  RequestProfilePage,
+  RequestAddPage,
+  EventTablePage,
 };
