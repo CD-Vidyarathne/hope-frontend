@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-lblue p-8">
+    <footer className="w-full bg-lblue pt-8 pb-2">
       <div className="w-[75%] flex mx-auto items-center justify-between gap-12">
         <div className="w-[25%]">
           <p>Be in the know</p>
@@ -33,6 +33,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className="w-full text-xs text-center mt-4">
+        Copyright© 2025 by CYAT
+      </p>
     </footer>
   );
 };

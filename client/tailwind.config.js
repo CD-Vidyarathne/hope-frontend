@@ -6,6 +6,7 @@ export default {
       colors: {
         lblue: "#BACAF2",
         dblue: "#293C5E",
+        wblue: "#EFF4FF",
       },
     },
   },
