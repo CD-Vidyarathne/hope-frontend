@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { cards } from "../sampleData";
 import Card from "../components/Card";
 
 const districts = [
@@ -33,6 +32,7 @@ const districts = [
 ];
 
 const Programs = () => {
+  const samplePrograms = [];
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedDistrict, setSelectedDistrict] = useState("");
 
@@ -66,14 +66,17 @@ const Programs = () => {
       </div>
 
       <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            id={`card-${index}`}
-            img={card.img}
-            text={card.text}
-          />
-        ))}
+        {samplePrograms.map((program) => {
+          return (
+            <Card
+              type="Participate"
+              key={program.id}
+              id={program.id}
+              img={program.imageURL}
+              text={program.venue}
+            />
+          );
+        })}
       </div>
     </div>
   );

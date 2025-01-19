@@ -1,16 +1,18 @@
-import { cards } from "../sampleData";
+import { EmptyProf } from "../assets";
 import Card from "../components/Card";
 
 const Donations = () => {
+  const sampleAidSeekers = [];
   return (
     <div className="p-8">
       <div className="grid gap-16 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
-        {cards.map((card, index) => (
+        {sampleAidSeekers.map((aidSeeker, index) => (
           <Card
+            type="Donate"
             key={index}
-            id={`card-${index}`}
-            img={card.img}
-            text={card.text}
+            id={aidSeeker.id}
+            img={aidSeeker.user.profilePicURL ?? EmptyProf}
+            text={`${aidSeeker.description.slice(0, 100)}...`}
           />
         ))}
       </div>

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Herobg } from "../assets";
+import { EmptyProf, Herobg } from "../assets";
 import Card from "../components/Card";
 import HopeButton from "../components/HopeButton";
-import { cards } from "../sampleData";
+import { useState } from "react";
 
 const Hero = () => {
   return (
@@ -23,14 +23,13 @@ const Hero = () => {
   );
 };
 
-import { useState } from "react";
-
 const HomeRow = () => {
+  const sampleAidSeekers: any[] = [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardsPerPage = 6;
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
+  const totalPages = Math.ceil(sampleAidSeekers.length / cardsPerPage);
 
-  const currentCards = cards.slice(
+  const currentCards = sampleAidSeekers.slice(
     currentIndex * cardsPerPage,
     (currentIndex + 1) * cardsPerPage,
   );
@@ -40,8 +39,14 @@ const HomeRow = () => {
       <h1 className="text-2xl">They are counting on YOU...</h1>
       <div className="mt-6">
         <div className={`flex gap-12 items-center justify-between`}>
-          {currentCards.map((card, index) => (
-            <Card key={index} id="12" img={card.img} text={card.text} />
+          {currentCards.map((aidSeeker, index) => (
+            <Card
+              type="Donate"
+              key={index}
+              id={aidSeeker.id}
+              img={aidSeeker.user.profilePicURL ?? EmptyProf}
+              text={`${aidSeeker.description.slice(0, 100)}...`}
+            />
           ))}
         </div>
       </div>
